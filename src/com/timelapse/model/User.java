@@ -5,7 +5,7 @@ package com.timelapse.model;
 
 
 /**
- * 
+ * 用户
  * @author Marhong
  * @time 2018年5月25日 上午9:48:31
  */

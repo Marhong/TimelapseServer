@@ -34,7 +34,21 @@ public class GetRecordsServlet extends HttpServlet {
     }
 
 
-
+    /* (non-Javadoc)
+     * @see javax.servlet.http.HttpServlet#doGet(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)
+     */
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    	// TODO Auto-generated method stub
+    	JSONArray userList = new JSONArray();
+		JSONObject user = new JSONObject();
+		user.put("userName", "sdf");
+		user.put("password", "sdf");
+		user.put("signature", "sd");
+		user.put("victoryPoint", 99);
+		userList.add(user);
+		resp.getWriter().print(user.toString() + "\n\n" + userList.toString());
+    }
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */

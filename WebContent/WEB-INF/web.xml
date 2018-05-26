@@ -17,12 +17,20 @@
     <servlet-name>loginServlet</servlet-name>
     <url-pattern>/loginServlet</url-pattern>
   </servlet-mapping>
-    <servlet>
+  <servlet>
     <servlet-name>getRecordsServlet</servlet-name>
     <servlet-class>com.timelapse.controller.GetRecordsServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>getRecordsServlet</servlet-name>
     <url-pattern>/getRecordsServlet</url-pattern>
+  </servlet-mapping>
+    <servlet>
+    <servlet-name>getHonorServlet</servlet-name>
+    <servlet-class>com.timelapse.controller.GetHonorServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>getHonorServlet</servlet-name>
+    <url-pattern>/getHonorServlet</url-pattern>
   </servlet-mapping>
 </web-app>
