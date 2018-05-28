@@ -25,12 +25,20 @@
     <servlet-name>getRecordsServlet</servlet-name>
     <url-pattern>/getRecordsServlet</url-pattern>
   </servlet-mapping>
-    <servlet>
+  <servlet>
     <servlet-name>getHonorServlet</servlet-name>
     <servlet-class>com.timelapse.controller.GetHonorServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>getHonorServlet</servlet-name>
     <url-pattern>/getHonorServlet</url-pattern>
+  </servlet-mapping>
+    <servlet>
+    <servlet-name>getSomedayGoalServlet</servlet-name>
+    <servlet-class>com.timelapse.controller.GetSomedayGoalServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>getSomedayGoalServlet</servlet-name>
+    <url-pattern>/getSomedayGoalServlet</url-pattern>
   </servlet-mapping>
 </web-app>
