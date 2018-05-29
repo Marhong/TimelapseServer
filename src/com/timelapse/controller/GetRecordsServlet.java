@@ -68,6 +68,7 @@ public class GetRecordsServlet extends HttpServlet {
 				record.put("initiator",curRecord.getInitiator());
 				record.put("receiver", curRecord.getReceiver());
 				record.put("time", curRecord.getTime());
+				record.put("timestring", curRecord.getTimestring());
 				record.put("initiatorResult", curRecord.getInitiatorResult());
 				record.put("receiverResult", curRecord.getReceiverResult());
 				record.put("iniUnfinishedNum",curRecord.getIniUnfinishedNum());

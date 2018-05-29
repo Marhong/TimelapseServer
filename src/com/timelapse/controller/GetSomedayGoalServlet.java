@@ -66,6 +66,7 @@ public class GetSomedayGoalServlet extends HttpServlet {
 			object.put("actualNewsTime", goal.getActualNewsTime());
 			object.put("actualOtherTime", goal.getActualOtherTime());
 			object.put("unfinishedItems", goal.getUnfinishedItems());
+			System.out.println("真实总时间:"+goal.getActualTotalTime()+"真实娱乐时间:"+goal.getActualSpareTime());
 			response.getWriter().print(object.toString());
 		}else {
 			response.getWriter().print("error");

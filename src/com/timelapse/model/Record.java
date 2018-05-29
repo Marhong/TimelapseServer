@@ -13,6 +13,7 @@ public class Record {
 	private String initiator;
 	private String receiver;
 	private String time;
+	private String timestring;
 	private int initiatorResult;
 	private int receiverResult;
 	private int iniUnfinishedNum;
@@ -24,42 +25,42 @@ public class Record {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	
 	/**
-	 * @param id 对战记录唯一编号
-	 * @param initiator 发起对战者名字
-	 * @param receiver  接受者名字
-	 * @param time      接受对战时间
-	 * @param initiatorResult 发起对战者结果(胜利则为1,失败则为0)
-	 * @param receiverResult  接受者结果(胜利则为1，失败则为0)
+	 * @param id
+	 * @param initiator
+	 * @param receiver
+	 * @param time
+	 * @param timestring
+	 * @param initiatorResult
+	 * @param receiverResult
+	 * @param iniUnfinishedNum
+	 * @param recUnfinishedNum
 	 */
-	public Record(long id,String initiator, String receiver, String time, int initiatorResult, int receiverResult,int iniUnfinishedNum,int recUnfinishedNum) {
+	public Record(long id, String initiator, String receiver, String time, String timestring, int initiatorResult,
+			int receiverResult, int iniUnfinishedNum, int recUnfinishedNum) {
 		super();
 		this.id = id;
 		this.initiator = initiator;
 		this.receiver = receiver;
 		this.time = time;
+		this.timestring = timestring;
 		this.initiatorResult = initiatorResult;
 		this.receiverResult = receiverResult;
 		this.iniUnfinishedNum = iniUnfinishedNum;
 		this.recUnfinishedNum = recUnfinishedNum;
 	}
-
-	
 	/**
 	 * @return the id
 	 */
 	public long getId() {
 		return id;
 	}
-
 	/**
 	 * @param id the id to set
 	 */
 	public void setId(long id) {
 		this.id = id;
 	}
-
 	/**
 	 * @return the initiator
 	 */
@@ -97,6 +98,18 @@ public class Record {
 		this.time = time;
 	}
 	/**
+	 * @return the timestring
+	 */
+	public String getTimestring() {
+		return timestring;
+	}
+	/**
+	 * @param timestring the timestring to set
+	 */
+	public void setTimestring(String timestring) {
+		this.timestring = timestring;
+	}
+	/**
 	 * @return the initiatorResult
 	 */
 	public int getInitiatorResult() {
@@ -120,41 +133,29 @@ public class Record {
 	public void setReceiverResult(int receiverResult) {
 		this.receiverResult = receiverResult;
 	}
-	
 	/**
 	 * @return the iniUnfinishedNum
 	 */
 	public int getIniUnfinishedNum() {
 		return iniUnfinishedNum;
 	}
-
 	/**
 	 * @param iniUnfinishedNum the iniUnfinishedNum to set
 	 */
 	public void setIniUnfinishedNum(int iniUnfinishedNum) {
 		this.iniUnfinishedNum = iniUnfinishedNum;
 	}
-
 	/**
 	 * @return the recUnfinishedNum
 	 */
 	public int getRecUnfinishedNum() {
 		return recUnfinishedNum;
 	}
-
 	/**
 	 * @param recUnfinishedNum the recUnfinishedNum to set
 	 */
 	public void setRecUnfinishedNum(int recUnfinishedNum) {
 		this.recUnfinishedNum = recUnfinishedNum;
 	}
-
-	/* (non-Javadoc)
-	 * @see java.lang.Object#toString()
-	 */
-	@Override
-	public String toString() {
-		// TODO Auto-generated method stub
-		return super.toString();
-	}
-}
+	
+ }

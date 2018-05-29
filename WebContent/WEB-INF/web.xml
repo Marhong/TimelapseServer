@@ -33,12 +33,28 @@
     <servlet-name>getHonorServlet</servlet-name>
     <url-pattern>/getHonorServlet</url-pattern>
   </servlet-mapping>
-    <servlet>
+  <servlet>
     <servlet-name>getSomedayGoalServlet</servlet-name>
     <servlet-class>com.timelapse.controller.GetSomedayGoalServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>getSomedayGoalServlet</servlet-name>
     <url-pattern>/getSomedayGoalServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>modifySignatureServlet</servlet-name>
+    <servlet-class>com.timelapse.controller.ModifySignatureServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>modifySignatureServlet</servlet-name>
+    <url-pattern>/modifySignatureServlet</url-pattern>
+  </servlet-mapping>
+    <servlet>
+    <servlet-name>modifyUserNameServlet</servlet-name>
+    <servlet-class>com.timelapse.controller.ModifyUserNameServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>modifyUserNameServlet</servlet-name>
+    <url-pattern>/modifyUserNameServlet</url-pattern>
   </servlet-mapping>
 </web-app>

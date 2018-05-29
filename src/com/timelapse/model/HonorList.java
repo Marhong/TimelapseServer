@@ -165,7 +165,18 @@ public class HonorList {
 					String sql = "update honor set totalFights = "+totalFights+",victoryFights ="+ victoryFights+",victoryPoints = "+victoryPoints+",nineKills = "+nineKills+",eightKills = "+eightKills+",sevenKills = "+sevenKills+",sixKills = "+sixKills+",fiveKills = "+fiveKills+",fourKills = "+fourKills+",maxVictory = "+maxVictory+",slainNum = "+slainNum+" where userName ="+userName+";";
 					int result = stmt.executeUpdate(sql);
 					if (result != -1) {
-						honorList.remove(honor);
+						curHonor.setUserName(userName);
+						curHonor.setTotalFights(totalFights);
+						curHonor.setVictoryFights(victoryFights);
+						curHonor.setVictoryPoints(victoryPoints);
+						curHonor.setNineKills(nineKills);
+						curHonor.setEightKills(eightKills);
+						curHonor.setSevenKills(sevenKills);
+						curHonor.setSixKills(sixKills);
+						curHonor.setFiveKills(fiveKills);
+						curHonor.setFourKills(fourKills);
+						curHonor.setMaxVictory(maxVictory);
+						curHonor.setSlainNum(slainNum);
 						return true;
 					} else {
 						return false;

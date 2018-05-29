@@ -39,6 +39,7 @@ public class RecordList {
 					record.setInitiator(rs.getString("initiator"));
 					record.setReceiver(rs.getString("receiver"));
 					record.setTime(rs.getString("time"));
+					record.setTimestring(rs.getString("timestring"));
 					record.setInitiatorResult(rs.getInt("initiatorResult"));
 					record.setReceiverResult(rs.getInt("receiverResult"));
 					record.setIniUnfinishedNum(rs.getInt("iniUnfinishedNum"));
@@ -100,6 +101,7 @@ public class RecordList {
 		String initiator = record.getInitiator();
 		String receiver = record.getReceiver();
 		String time = record.getTime();
+		String timestring = record.getTimestring();
 		int initiatorResult = record.getInitiatorResult();
 		int receiverResult = record.getReceiverResult();
 		int iniUnfinishedNum = record.getIniUnfinishedNum();
@@ -108,8 +110,8 @@ public class RecordList {
 		try {
 			conn = AccessJDBCUtil.getAccessDBConnection();
 			Statement stmt = conn.createStatement();
-			String sql = "insert into record (id,initiator,receiver,time,initiatorResult,receiverResult,iniUnfinishedNum,recUnfinishedNum) values("+id+",'" + initiator + "','"
-					+ receiver + "','" + time+"',"+initiatorResult +","+receiverResult+","+iniUnfinishedNum+","+recUnfinishedNum+");";
+			String sql = "insert into record (id,initiator,receiver,time,initiatorResult,receiverResult,iniUnfinishedNum,recUnfinishedNum,timestring) values("+id+",'" + initiator + "','"
+					+ receiver + "','" + time+"',"+initiatorResult +","+receiverResult+","+iniUnfinishedNum+","+recUnfinishedNum+",'"+timestring+"');";
 			int result = stmt.executeUpdate(sql);
 			if (result != -1) {
 				recordList.add(record);
