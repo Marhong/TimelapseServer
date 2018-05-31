@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 import com.timelapse.model.User;
 import com.timelapse.model.UserList;
 
+import net.sf.json.JSONObject;
+
 /**
  * Servlet implementation class ModifyUserNameServlet
  */
@@ -46,16 +48,20 @@ public class ModifyUserNameServlet extends HttpServlet {
 		//System.out.println(newUserName+"_"+oldUserName);
 		UserList userList = new UserList();
 		User user = userList.getUserByName(oldUserName);
+		JSONObject type = new JSONObject();
 		if(user != null) {
 			//System.out.println("该用户存在");
 			int result = userList.modifyUserName(newUserName,oldUserName);
 			if(result>0) {
 				System.out.println("修改成功");
-				response.getWriter().print("success");
+				type.put("type", "success");
 			}else if(result  == 0) {
-				response.getWriter().print("exist");
+				type.put("type","exist");
+			}else {
+				type.put("type", "error");
 			}
 		}
+		response.getWriter().print(type.toString());
 	}
 
 }

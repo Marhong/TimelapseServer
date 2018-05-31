@@ -49,12 +49,20 @@
     <servlet-name>modifySignatureServlet</servlet-name>
     <url-pattern>/modifySignatureServlet</url-pattern>
   </servlet-mapping>
-    <servlet>
+  <servlet>
     <servlet-name>modifyUserNameServlet</servlet-name>
     <servlet-class>com.timelapse.controller.ModifyUserNameServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>modifyUserNameServlet</servlet-name>
     <url-pattern>/modifyUserNameServlet</url-pattern>
+  </servlet-mapping>
+    <servlet>
+    <servlet-name>registerAccountServlet</servlet-name>
+    <servlet-class>com.timelapse.controller.RegisterAccountServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>registerAccountServlet</servlet-name>
+    <url-pattern>/registerAccountServlet</url-pattern>
   </servlet-mapping>
 </web-app>

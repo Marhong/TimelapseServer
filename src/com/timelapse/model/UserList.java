@@ -91,20 +91,23 @@ public class UserList {
 	 * @time 2017年11月15日 下午1:39:20
 	 * @param user 待添加的用户
 	 */
-	public boolean addUser(User user) throws ClassNotFoundException{
+	public boolean addUser(User user){
 		String userName = user.getUserName();
 		String password = user.getPassword();
 		String signature = user.getSignature();
 		int victoryPoint = user.getVitoryPoint();
-		
+		int head = user.getHead();
 		Connection conn=null;
 		try {
 			conn = AccessJDBCUtil.getAccessDBConnection();
 			Statement stmt = conn.createStatement();
-			String sql = "insert into user (userName,password,signature,victoryPoint) values('" + userName + "','"
-					+ password + "','" + signature+"',"+victoryPoint + ");";
+			String sql = "insert into user (userName,password,signature,victoryPoint,head) values('" + userName + "','"
+					+ password + "','" + signature+"',"+victoryPoint +","+head+ ");";
+			String sql2 = "insert into honor (userName,totalFights,victoryFights,victoryPoints,nineKills,eightKills,sevenKills,sixKills,fiveKills,fourKills,maxVictory,slainNum) values('"+userName+"'," + 0 + ","
+					+ 0 + "," + 0+","+0 +","+0+","+0+","+0+","+0+","+0+","+0+","+0+");";
 			int result = stmt.executeUpdate(sql);
-			if (result != -1) {
+			int result2 = stmt.executeUpdate(sql2);
+			if (result != -1 && result2 != -1) {
 				userList.add(user);
 				return true;
 			} else {
